@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const postRoutes = require("./routes");
+require("dotenv").config();
 
 const app = express();
 const PORT = 5000;
@@ -11,7 +12,7 @@ app.use(express.json());
 app.use("/api/posts", postRoutes);
 
 mongoose
-  .connect("mongodb://localhost:27017/postsdb", {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
