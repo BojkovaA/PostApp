@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: postapp
+data:
+  MONGO_URL: "mongodb://admin:testpass@mongo:27017/postsdb?authSource=admin"

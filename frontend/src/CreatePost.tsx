@@ -13,7 +13,7 @@ const CreatePost: React.FC = () => {
     if (!title.trim() || !description.trim() || !body.trim()) return;
 
     try {
-      await axios.post("http://localhost:5000/api/posts", {
+      await axios.post("/api/posts", {
         title,
         description,
         body,

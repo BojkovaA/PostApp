@@ -15,7 +15,7 @@ const Details: React.FC = () => {
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:5000/api/posts/${id}/details`)
+    fetch(`/api/posts/${id}/details`)
       .then((res) => res.json())
       .then((data) => setPost(data))
       .catch((err) => console.error("Error fetching post details:", err));

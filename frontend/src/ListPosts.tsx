@@ -14,7 +14,7 @@ const ListPosts: React.FC = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get<Post[]>("http://localhost:5000/api/posts");
+      const res = await axios.get<Post[]>("/api/posts");
       setPosts(res.data);
     } catch (error) {
       console.error("Error fetching posts", error);
@@ -27,7 +27,7 @@ const ListPosts: React.FC = () => {
 
   const deletePost = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${id}`);
+      await axios.delete(`/api/posts/${id}`);
       fetchPosts();
     } catch (error) {
       console.error("Error deleting post", error);
