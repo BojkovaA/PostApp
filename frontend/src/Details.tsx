@@ -25,7 +25,7 @@ const Details: React.FC = () => {
 
   return (
     <div>
-      <h2>{post.title}</h2
+      <h2>{post.title}</h2>
       <p>
         <strong>Description:</strong> {post.description}
       </p>
